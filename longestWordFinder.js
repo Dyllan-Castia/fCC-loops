@@ -1,4 +1,4 @@
-//Finds the longets word in the string passed as the argument to the function and returns the length of that word.
+//Finds the longest word in the string passed as the argument to the function and returns the length of that word.
 function findLongestWordLength(str) {
   const words = str.split(" ");
   let count = 0
