@@ -59,3 +59,59 @@ console.log(`Consonant Count: ${consonantCount}`);
  // }
   //return count;
 //}
+
+//My solution*
+//Checks how many punctiation characters are in the sentence and returns that number.
+function getPunctuationCount(sentence) {
+  let count = 0;
+  for (const char of sentence.toLowerCase()) {
+    if(!(char >= "a" && char <= "z") && char !== " ") {
+      count++;
+    }
+  }
+  return count;
+}
+const punctuationCount = getPunctuationCount("WHAT?!?!?!?!?");
+console.log(`Punctuation Count: ${punctuationCount}`);
+//Punctuation Count: 9
+
+//freecodecamp.org's solution*
+//function getPunctuationCount(sentence) {
+  //const punctuations = ".,!?;:-()[]{}\"'–";
+  //let count = 0;
+
+  //for (const char of sentence) {
+    //if (punctuations.includes(char)) {
+      //count++;
+    //}
+  //}
+  //return count;
+//}
+
+//My solution*
+//Counts the number of words in the sentence argument and returns that number.
+function getWordCount(sentence) {
+  let count = 0
+  const words = sentence.split(" ");
+  for (let word of words) {
+    if (word === "") {
+
+    } else
+    count++;
+  }
+  return count;
+}
+
+const wordCount = getWordCount("I lover freeCodeCamp");
+console.log(`Word Count: ${wordCount}`);
+//Word Count: 3
+
+//freecodecamp.org's solution*
+//function getWordCount(sentence) {
+  //if (sentence.trim() === '') {
+    //return 0;
+  //}
+  
+  //const words = sentence.trim().split(/\s+/);
+  //return words.length;
+//}
